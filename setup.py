@@ -1,23 +1,21 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = fh.read()
 
 setup(
-    name = 'asan',
+    name = 'anusah',
     version = '0.0.1',
     author = 'Anurag Goenka, Ashutosh Sah',
-    author_email = 'anurag.goenka@gmail.com',
+    author_email = 'anurag.goenka25@gmail.com',
     license = 'MIT',
-    description = 'Generic CLI tool asan',
-    long_description = long_description,
+    description = 'Generic CLI tool anusah',
     long_description_content_type = "text/markdown",
     url = '',
-    py_modules = ['asan', 'app'],
+    py_modules = ['anusah', 'app'],
     packages = find_packages(),
-    install_requires = [requirements],
+    install_requires = [
+        "click>=8.0.1",
+        "pyperclip>=1.8.2"
+    ],
     python_requires='>=3.7',
     classifiers=[
         "Programming Language :: Python :: 3.9",
@@ -26,6 +24,6 @@ setup(
     ],
     entry_points = '''
         [console_scripts]
-        asan=asan:cli
+        anusah=anusah:cli
     '''
 )
